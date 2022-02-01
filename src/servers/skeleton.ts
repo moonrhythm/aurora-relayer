@@ -61,6 +61,7 @@ export abstract class SkeletonServer implements web3.Service {
   }
 
   protected async _banIP(ip: string, reason?: string): Promise<void> {
+    return; // disable ban function
     if (!ip) return;
     blacklist('IPs').add(ip);
     if (
